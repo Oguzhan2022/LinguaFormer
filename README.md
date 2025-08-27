@@ -55,3 +55,48 @@ The model's translation quality was measured on 300 test samples using ROUGE met
 -   Keras-Hub (for custom layers and tokenizers)
 -   TensorFlow-Text (for WordPiece vocabulary generation)
 -   Rouge-Score (for evaluation)
+
+---
+
+## How to Use
+
+### Prerequisites
+
+-   Python 3.8+
+-   `pip` and `venv` (recommended)
+
+### Setup and Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Oguzhan2022/LinguaFormer.git
+    cd LinguaFormer
+    ```
+
+2.  **Create and activate a virtual environment:**
+    ```bash
+    python -m venv venv
+    # On Windows:
+    .\venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+
+3.  **Install the required dependencies:**
+    ```bash
+    pip install --upgrade rouge-score keras-hub keras tensorflow tensorflow-text
+    ```
+
+4.  **Download the Dataset:**
+    -   Go to the dataset page on Kaggle: **[English-to-Turkish Sentence Pairs](https://www.kaggle.com/datasets/orvile/english-to-turkish-sentence-pairs/data)**.
+    -   Download the file named `Sentence pairs in English-Turkish - 2025-05-06.tsv`.
+    -   Place the downloaded `.tsv` file inside the `LinguaFormer` project folder you cloned.
+
+5.  **Run the Jupyter Notebook:**
+    -   Launch the `LinguaFormer_EN_TR_Translation.ipynb` notebook.
+    -   **Important:** Before running, make sure the `file_path` variable in the notebook correctly points to the dataset file. For example:
+        ```python
+        # Update this path if you placed the file somewhere else
+        file_path = "Sentence pairs in English-Turkish - 2025-05-06.tsv"
+        ```
+    -   Run all the cells sequentially to train the tokenizers, build the model, and run the training process.
